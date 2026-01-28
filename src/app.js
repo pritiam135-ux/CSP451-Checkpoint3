@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 
 const app = express();
 
@@ -8,17 +8,14 @@ app.use(express.json());
  * GET /health
  * Returns service health and uptime
  */
-app.get('/health', (req, res) => {
+app.get("/health", (req, res) => {
   res.status(200).json({
-    status: 'healthy',
-    uptime: process.uptime()
+    status: "healthy",
+    uptime: process.uptime(),
   });
 });
 
 module.exports = app;
-
-
-
 
 // Allow running locally: `npm start`
 if (require.main === module) {
